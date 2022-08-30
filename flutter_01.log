@@ -1,0 +1,92 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter pub get
+
+## exception
+
+ProcessException: ProcessException: No such file or directoryWorking directory: "/Users/kietta/MLTech_Soft/echo/example"
+pub env: {
+  "FLUTTER_ROOT": "/Users/kietta/Documents/Development/flutter",
+  "PUB_ENVIRONMENT": "flutter_cli:get",
+  "PUB_CACHE": "/Users/kietta/Documents/Development/flutter/.pub-cache",
+}
+
+  Command: /Users/kietta/Documents/Development/flutter/bin/cache/dart-sdk/bin/dart __deprecated_pub --verbosity=warning get --no-precompile
+
+```
+#0      _DefaultPub.get (package:flutter_tools/src/dart/pub.dart:278:9)
+<asynchronous suspension>
+#1      PackagesGetCommand._runPubGet (package:flutter_tools/src/commands/packages.dart:141:7)
+<asynchronous suspension>
+#2      PackagesGetCommand.runCommand (package:flutter_tools/src/commands/packages.dart:182:7)
+<asynchronous suspension>
+#3      FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1183:27)
+<asynchronous suspension>
+#4      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#5      CommandRunner.runCommand (package:args/command_runner.dart:209:13)
+<asynchronous suspension>
+#6      FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:281:9)
+<asynchronous suspension>
+#7      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#8      FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:229:5)
+<asynchronous suspension>
+#9      run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:62:9)
+<asynchronous suspension>
+#10     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#11     main (package:flutter_tools/executable.dart:94:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 3.0.5, on macOS 12.4 21F79 darwin-arm, locale en-VN)
+    • Flutter version 3.0.5 at /Users/kietta/Documents/Development/flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision f1875d570e (7 weeks ago), 2022-07-13 11:24:16 -0700
+    • Engine revision e85ea0e79c
+    • Dart version 2.17.6
+    • DevTools version 2.12.2
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 32.1.0-rc1)
+    • Android SDK at /Users/kietta/Library/Android/sdk
+    • Platform android-33, build-tools 32.1.0-rc1
+    • Java binary at: /Applications/Android Studio.app/Contents/jre/Contents/Home/bin/java
+    • Java version OpenJDK Runtime Environment (build 11.0.12+0-b1504.28-7817840)
+    • All Android licenses accepted.
+
+[✓] Xcode - develop for iOS and macOS (Xcode 13.4.1)
+    • Xcode at /Applications/Xcode.app/Contents/Developer
+    • CocoaPods version 1.11.3
+
+[✓] Chrome - develop for the web
+    • Chrome at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+
+[✓] Android Studio (version 2021.2)
+    • Android Studio at /Applications/Android Studio.app/Contents
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 11.0.12+0-b1504.28-7817840)
+
+[✓] VS Code (version 1.70.2)
+    • VS Code at /Applications/Visual Studio Code.app/Contents
+    • Flutter extension version 3.46.0
+
+[✓] Connected device (3 available)
+    • iPhone 8 (mobile) • EECFC835-5929-47AD-B412-B60251FD253D • ios            • com.apple.CoreSimulator.SimRuntime.iOS-15-5 (simulator)
+    • macOS (desktop)   • macos                                • darwin-arm64   • macOS 12.4 21F79 darwin-arm
+    • Chrome (web)      • chrome                               • web-javascript • Google Chrome 104.0.5112.101
+
+[✓] HTTP Host Availability
+    • All required HTTP hosts are available
+
+• No issues found!
+```
