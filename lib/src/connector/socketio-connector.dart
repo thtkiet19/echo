@@ -59,21 +59,21 @@ class SocketIoConnector extends Connector {
   /// Get a presence channel instance by name.
   @override
   SocketIoPresenceChannel presenceChannel(String name) {
-    if (this.channels['presence-$name'] == null) {
-      this.channels['presence-$name'] = new SocketIoPresenceChannel(
+    if (this.channels['$name'] == null) {
+      this.channels['$name'] = new SocketIoPresenceChannel(
         this.socket,
-        'presence-$name',
+        '$name',
         this.options,
       );
     }
 
-    return this.channels['presence-$name'] as SocketIoPresenceChannel;
+    return this.channels['$name'] as SocketIoPresenceChannel;
   }
 
   /// Leave the given channel, as well as its private and presence variants.
   @override
   void leave(String name) {
-    List<String> channels = [name, 'private-$name', 'presence-$name'];
+    List<String> channels = [name, 'private-$name', '$name'];
 
     channels.forEach((name) => this.leaveChannel(name));
   }

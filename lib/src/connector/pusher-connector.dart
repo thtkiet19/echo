@@ -70,21 +70,21 @@ class PusherConnector extends Connector {
   /// Get a presence channel instance by name.
   @override
   PusherPresenceChannel presenceChannel(String name) {
-    if (this.channels['presence-$name'] == null) {
-      this.channels['presence-$name'] = new PusherPresenceChannel(
+    if (this.channels['$name'] == null) {
+      this.channels['$name'] = new PusherPresenceChannel(
         this.pusher,
-        'presence-$name',
+        '$name',
         this.options,
       );
     }
 
-    return this.channels['presence-$name'] as PusherPresenceChannel;
+    return this.channels['$name'] as PusherPresenceChannel;
   }
 
   /// Leave the given channel, as well as its private and presence variants.
   @override
   void leave(String name) {
-    List<String> channels = [name, 'private-$name', 'presence-$name'];
+    List<String> channels = [name, 'private-$name', '$name'];
 
     channels.forEach((String name) => this.leaveChannel(name));
   }
